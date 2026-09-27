@@ -1,0 +1,170 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000"><title>EF GAMES // giving you games since 25</title><style>:root{--b:#000;--w:#fff;--g:#777;--l:#333}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#000;color:#fff;font:14px Consolas,monospace;min-height:100vh;overflow-x:hidden}button,input{font:inherit}#matrix{position:fixed;inset:0;width:100%;height:100%;z-index:-5;opacity:.25}.scan{position:fixed;inset:0;pointer-events:none;z-index:50;background:repeating-linear-gradient(0deg,transparent 0 3px,#fff1 4px)}.vig{position:fixed;inset:0;pointer-events:none;z-index:49;background:radial-gradient(circle,transparent 40%,#000c)}#boot{position:fixed;inset:0;background:#000;z-index:100;display:grid;place-items:center;transition:.6s}#boot.hide{opacity:0;visibility:hidden}.boot{width:min(700px,90%);border:1px solid #fff;padding:25px;box-shadow:0 0 40px #222}.boot h2{font-size:clamp(30px,7vw,70px);margin:0}.bar{height:4px;background:#222}.bar i{display:block;height:100%;background:#fff;width:0;animation:load 2s forwards}@keyframes load{to{width:100%}}header{min-height:68vh;display:grid;place-items:center;text-align:center;padding:70px 20px}.k{color:#888;letter-spacing:.3em;animation:blink 2s infinite}h1{font-size:clamp(60px,14vw,180px);margin:20px 0;line-height:.8;letter-spacing:.08em;text-shadow:2px 0 #fff,-2px 0 #fff;animation:j 3s steps(1) infinite}@keyframes j{95%{transform:translate(3px,-1px)}96%{transform:translate(-3px,2px)}97%{transform:none}}.sub{font-size:clamp(14px,2vw,22px);letter-spacing:.12em}.since{color:#777;font-size:11px;margin-top:10px;letter-spacing:.2em}.line{height:1px;background:#fff;width:min(750px,90%);margin:30px auto;box-shadow:0 0 15px #fff5}.hint{color:#777;font-size:10px;letter-spacing:.2em}@keyframes blink{50%{opacity:.3}}main{width:min(1200px,92%);margin:auto;padding-bottom:100px}.tools{position:sticky;top:10px;z-index:20;display:flex;gap:10px;flex-wrap:wrap;padding:12px;border:1px solid #333;background:#000e;backdrop-filter:blur(8px);margin-bottom:25px}#search{flex:1 1 280px;background:#050505;color:#fff;border:1px solid #555;padding:12px;outline:0}.btn{background:#000;color:#fff;border:1px solid #555;padding:10px 14px}.btn:hover,.open:hover{background:#fff;color:#000}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}.card{border:1px solid #444;padding:22px;min-height:190px;background:linear-gradient(145deg,#0b0b0b,#030303);transition:.2s;position:relative;overflow:hidden}.card:hover{transform:translateY(-5px);border-color:#fff;box-shadow:0 0 25px #222}.num{color:#666;font-size:10px;letter-spacing:.2em}.card h2{font-size:24px;margin:12px 0}.card p{color:#888;font-size:12px}.open{width:100%;padding:11px;background:#000;color:#fff;border:1px solid #777}#modal{display:none;position:fixed;inset:0;z-index:80;background:#000e;align-items:center;justify-content:center;padding:20px}#modal.show{display:flex}.box{width:min(900px,100%);max-height:90vh;background:#050505;border:1px solid #fff;display:flex;flex-direction:column}.head{display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid #333}.links{overflow:auto;padding:12px}.row{display:flex;gap:10px;align-items:center;border:1px solid #222;padding:10px;margin:8px 0}.row:hover{border-color:#aaa}.idx{color:#555;width:30px;text-align:right}.url{color:#fff;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.copy,.close{background:#000;color:#aaa;border:1px solid #444;padding:6px}.copy:hover,.close:hover{background:#fff;color:#000}.empty{padding:30px;border:1px dashed #444;text-align:center;color:#777}#toast{position:fixed;bottom:25px;left:50%;z-index:120;background:#fff;color:#000;padding:10px 16px;opacity:0;transform:translate(-50%,20px);transition:.2s}#toast.show{opacity:1;transform:translate(-50%,0)}footer{text-align:center;color:#555;border-top:1px solid #222;padding:35px;letter-spacing:.15em}@media(max-width:600px){header{min-height:58vh}.tools{position:relative}.grid{grid-template-columns:1fr}.copy{display:none}}
+.musicWrap{margin-top:28px;border:1px solid #444;background:linear-gradient(145deg,#090909,#020202);padding:20px;box-shadow:0 0 35px #111}
+.musicTop{display:flex;justify-content:space-between;align-items:flex-end;gap:15px;flex-wrap:wrap;border-bottom:1px solid #222;padding-bottom:18px}
+.musicTitle{font-size:clamp(30px,6vw,58px);margin:0;letter-spacing:.08em}
+.musicSub{color:#777;font-size:11px;margin-top:7px;letter-spacing:.16em}
+.musicPlayer{margin-top:18px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;border:1px solid #333;padding:15px;background:#000}
+.nowPlaying{min-width:0}
+.nowLabel{color:#666;font-size:10px;letter-spacing:.18em}
+.nowName{font-size:18px;margin-top:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+audio{width:100%;margin-top:12px;filter:grayscale(1)}
+.musicBtns{display:flex;gap:8px;flex-wrap:wrap}
+.musicBtn{background:#000;color:#fff;border:1px solid #666;padding:9px 12px;cursor:pointer}
+.musicBtn:hover{background:#fff;color:#000}
+.musicGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px;margin-top:18px}
+.genre{border:1px solid #292929;background:#050505;padding:14px;cursor:pointer;text-align:left;color:#fff}
+.genre:hover,.genre.active{border-color:#fff;transform:translateY(-2px)}
+.genre b{display:block;font-size:14px}
+.genre span{display:block;color:#666;font-size:10px;margin-top:6px}
+.musicTools{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+.musicTools input{flex:1 1 250px;background:#000;color:#fff;border:1px solid #555;padding:11px;outline:0}
+.queue{margin-top:18px;border-top:1px solid #222;padding-top:14px}
+.queueHead{display:flex;justify-content:space-between;align-items:center;color:#aaa;font-size:11px;letter-spacing:.12em}
+.queueList{display:grid;gap:7px;margin-top:9px}
+.track{display:flex;align-items:center;gap:10px;border:1px solid #222;padding:9px;background:#030303}
+.track.playing{border-color:#fff}
+.trackName{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.track button{background:#000;color:#aaa;border:1px solid #444;padding:6px 9px;cursor:pointer}
+.track button:hover{background:#fff;color:#000}
+.musicNote{margin-top:12px;color:#555;font-size:10px;line-height:1.5}
+@media(max-width:650px){.musicPlayer{grid-template-columns:1fr}.musicTitle{font-size:34px}}
+</style></head><body><canvas id="matrix"></canvas><div class="scan"></div><div class="vig"></div><div id="boot"><div class="boot"><div style="font-size:42px;font-weight:900;letter-spacing:8px;margin-bottom:10px;text-shadow:2px 0 #fff,-2px 0 #888">EF GAMES</div><div style="letter-spacing:3px;margin-bottom:20px">SYSTEM BOOT // 25</div><h2>EF_GAMES</h2><div id="log"></div><div class="bar"><i id="bootbar"></i></div><div id="bootpct" style="margin-top:8px;text-align:right;font-size:12px">0%</div></div></div><header><div><div class="k">/// CONNECTION ESTABLISHED ///</div><h1>EF GAMES</h1><div class="sub">"giving you games since 25"</div><div class="since">UNBLOCKED // GAME PORTAL // v3.0</div><div class="line"></div><div class="hint">SCROLL TO ACCESS DATABASE ↓</div></div></header><main><div class="tools"><input id="search" placeholder="SEARCH GAMES OR LINKS..." autocomplete="off"><button class="btn" onclick="randomGame()">RANDOM</button><button class="btn" onclick="allGames()">SHOW ALL</button><button class="btn" onclick="openPanel('accountPanel')">ACCOUNT</button><button class="btn" onclick="openPanel('modPanel')">MOD TOOLS</button><button class="btn" onclick="document.getElementById('music').scrollIntoView({behavior:'smooth'})">MUSIC ♪</button></div><section class="grid"></section>
+<section class="musicWrap" id="music">
+  <div class="musicTop">
+    <div>
+      <div class="num">EF:// AUDIO DATABASE</div>
+      <h2 class="musicTitle">MUSIC</h2>
+      <div class="musicSub">PLAY // QUEUE // DISCOVER // LOOP</div>
+    </div>
+    <div class="musicBtns">
+      <button class="musicBtn" onclick="document.getElementById('musicFile').click()">+ ADD FILES</button>
+      <input id="musicFile" type="file" accept="audio/*" multiple hidden>
+    </div>
+  </div>
+
+  <div class="musicPlayer">
+    <div class="nowPlaying">
+      <div class="nowLabel">NOW PLAYING</div>
+      <div id="nowName" class="nowName">NO TRACK SELECTED</div>
+      <audio id="audio" controls preload="metadata"></audio>
+    </div>
+    <div class="musicBtns">
+      <button class="musicBtn" onclick="musicPrev()">◀ PREV</button>
+      <button class="musicBtn" onclick="musicPlayPause()">PLAY / PAUSE</button>
+      <button class="musicBtn" onclick="musicNext()">NEXT ▶</button>
+      <button class="musicBtn" onclick="musicShuffle()">SHUFFLE</button>
+    </div>
+  </div>
+
+  <div class="musicTools">
+    <input id="musicUrl" placeholder="Paste a direct audio URL (MP3, OGG, WAV...)">
+    <button class="musicBtn" onclick="addMusicUrl()">ADD URL</button>
+    <button class="musicBtn" onclick="clearQueue()">CLEAR QUEUE</button>
+  </div>
+
+  <div class="musicGrid" id="genres"></div>
+
+  <div class="queue">
+    <div class="queueHead"><span>QUEUE</span><span id="queueCount">0 TRACKS</span></div>
+    <div class="queueList" id="queueList"></div>
+  </div>
+  <div class="musicNote">EF GAMES does not bundle copyrighted recordings. Add audio files you own or are allowed to play, or use the genre buttons to open music searches on major streaming/video services.</div>
+</section>
+</main><div id="modal"><div class="box"><div class="head"><div id="mt">DATABASE</div><button class="close" onclick="closeBox()">CLOSE [ESC]</button></div><div id="links" class="links"></div></div></div><div id="toast"></div>
+<div id="modPanel" class="panel"><div class="panelBox"><div class="head"><b>MODERATOR TOOLS</b><button class="close" onclick="closePanel('modPanel')">CLOSE</button></div><div id="modContent" class="panelContent"></div></div></div>
+<div id="accountPanel" class="panel"><div class="panelBox"><div class="head"><b>EF GAMES ACCOUNT</b><button class="close" onclick="closePanel('accountPanel')">CLOSE</button></div><div id="accountContent" class="panelContent"></div></div></div>
+<style>
+.panel{display:none;position:fixed;inset:0;z-index:200;background:#000e;align-items:center;justify-content:center;padding:18px}.panel.show{display:flex}.panelBox{width:min(760px,100%);max-height:88vh;overflow:auto;background:#050505;border:1px solid #fff;box-shadow:0 0 35px #111}.panelContent{padding:18px}.panelContent input{display:block;width:100%;margin:8px 0;background:#000;color:#fff;border:1px solid #555;padding:12px}.userRow{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid #333;padding:10px;margin:7px 0}.role{font-size:11px;color:#aaa}.danger{border-color:#833!important}.ok{border-color:#aaa!important}.badgeMod{font-size:10px;border:1px solid #fff;padding:2px 5px;margin-left:5px}.panelNote{color:#888;font-size:12px;line-height:1.5}.panelContent h3{margin-top:0}.modMsg{margin:8px 0;color:#aaa}
+</style>
+<script>
+const EFKEY='EF_GAMES_ACCOUNT_V1';
+function today(){return new Date().toISOString().slice(0,10)}
+function getAccount(){try{return JSON.parse(localStorage.getItem(EFKEY)||'null')}catch(e){return null}}
+function saveAccount(a){localStorage.setItem(EFKEY,JSON.stringify(a))}
+function esc(v){return String(v==null?'':v).replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]))}
+function msg(x){const t=document.getElementById('toast');if(t){t.textContent=x;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1200)}}
+function openPanel(id){const el=document.getElementById(id);if(el){el.classList.add('show');document.body.style.overflow='hidden';if(id==='accountPanel')renderAccount();if(id==='modPanel')renderMod()}}
+function closePanel(id){const el=document.getElementById(id);if(el)el.classList.remove('show');if(!document.querySelector('.panel.show'))document.body.style.overflow=''}
+function renderAccount(){const box=document.getElementById('accountContent');if(!box)return;const a=getAccount();if(!a){box.innerHTML='<h3>CREATE ACCOUNT</h3><input id="acctUser" maxlength="20" placeholder="Username"><input id="acctPass" maxlength="80" type="password" placeholder="Password"><button class="btn" onclick="createAccount()">CREATE ACCOUNT</button><div id="acctMsg" class="modMsg"></div>';return}box.innerHTML='<h3>'+esc(a.username)+' <span class="badgeMod">'+esc((a.role||'member').toUpperCase())+'</span></h3><p class="panelNote">Coins: <b>'+Number(a.coins||0)+'</b><br>Joined: '+esc(a.joined||today())+'</p><button class="btn danger" onclick="logoutAccount()">LOG OUT</button>'}
+function createAccount(){const u=(document.getElementById('acctUser').value||'').trim(),p=(document.getElementById('acctPass').value||'');const m=document.getElementById('acctMsg');if(!/^[A-Za-z0-9_ -]{3,20}$/.test(u)){m.textContent='Username must be 3–20 characters.';return}if(p.length<6){m.textContent='Password must be at least 6 characters.';return}if(getAccount()){m.textContent='An account is already signed in.';return}const role=localStorage.getItem('EF_GAMES_OWNER_CLAIMED')?'member':'owner';saveAccount({username:u,passHash:btoa(unescape(encodeURIComponent(p))),role,coins:250,joined:today()});localStorage.setItem('EF_GAMES_OWNER_CLAIMED','1');renderAccount();msg('ACCOUNT CREATED')}
+function logoutAccount(){localStorage.removeItem(EFKEY);renderAccount();msg('LOGGED OUT')}
+// Initialize the requested site-owner account in this browser only.
+(function(){try{if(!getAccount()){saveAccount({username:'e17an',passHash:btoa(unescape(encodeURIComponent('04126@!'))),role:'owner',coins:250,joined:today()});localStorage.setItem('EF_GAMES_OWNER_CLAIMED','1')}}catch(e){}})();
+</script>
+<script>
+const MODKEY='EF_GAMES_MOD_ROLES_V1';
+function getRoles(){try{return JSON.parse(localStorage.getItem(MODKEY)||'{}')}catch(e){return {}}}
+function saveRoles(r){localStorage.setItem(MODKEY,JSON.stringify(r))}
+function isOwner(){const a=getAccount();return a&&a.role==='owner'}
+function isMod(){const a=getAccount();return a&&(a.role==='owner'||a.role==='moderator')}
+function roleOf(u){return getRoles()[u]||''}
+function ensureOwner(){let a=getAccount();if(a&&!a.role){a.role='owner';saveAccount(a)}}
+function renderMod(){ensureOwner();const a=getAccount(),box=document.getElementById('modContent');if(!a){box.innerHTML='<h3>OWNER ACCESS REQUIRED</h3><p class="panelNote">Create the site-owner account first. Moderator controls are intentionally unavailable to visitors without an account.</p>';return}if(!isOwner()){box.innerHTML='<h3>MODERATOR TOOLS</h3><p class="panelNote">Only the site owner can appoint or remove moderators in this browser-only version.</p><p>Your role: <b>'+esc(a.role||'member')+'</b></p>';return}let accounts=[];try{accounts=Object.keys(localStorage).filter(k=>k===EFKEY).map(k=>JSON.parse(localStorage.getItem(k))).filter(Boolean)}catch(e){}let current=getRoles();let html='<h3>APPOINT MODERATORS</h3><p class="panelNote">Type a username to give or remove moderator status. In this local version, roles are stored on this browser.</p><input id="modUser" maxlength="20" placeholder="Username"><button class="btn" onclick="setModerator()">MAKE MODERATOR</button><div id="modMsg" class="modMsg"></div><hr style="border-color:#222"><p class="panelNote">Current owner: <b>'+esc(a.username)+'</b></p>';for(const [u,r] of Object.entries(current)){html+='<div class="userRow"><span>'+esc(u)+' <span class="badgeMod">MODERATOR</span></span><button class="btn danger" onclick="removeModerator(\''+esc(u).replace(/'/g,"\\'")+'\')">REMOVE</button></div>'}box.innerHTML=html}
+function setModerator(){if(!isOwner())return;const input=document.getElementById('modUser'),u=(input.value||'').trim();if(!u){document.getElementById('modMsg').textContent='Enter a username.';return}const a=getAccount();if(u===a.username){document.getElementById('modMsg').textContent='You are already the owner.';return}const r=getRoles();r[u]='moderator';saveRoles(r);document.getElementById('modMsg').textContent=u+' is now a moderator.';input.value='';renderMod()}
+function removeModerator(u){if(!isOwner())return;const r=getRoles();delete r[u];saveRoles(r);renderMod()}
+function modBadge(username){const a=getAccount();if(a&&a.username===username&&a.role==='owner')return ' <span class="badgeMod">OWNER</span>';if(roleOf(username)==='moderator')return ' <span class="badgeMod">MOD</span>';return ''}
+function openMod(){openPanel('modPanel');renderMod()}
+const oldOpenPanel=openPanel;openPanel=function(id){oldOpenPanel(id);if(id==='modPanel')renderMod();if(id==='accountPanel')renderAccount()};
+</script>
+<footer>● EF GAMES ONLINE<br><br>PRESS / TO SEARCH // ESC TO CLOSE</footer><script>const games=[{"title": "FERN", "links": ["https://s3.amazonaws.com/fernlinks/index.html", "https://s3.amazonaws.com/classworks/index.html", "https://s3.amazonaws.com/bull33/index.html", "https://s3.amazonaws.com/bullbestyoutuber/index.html", "https://s3.amazonaws.com/bulledu/index.html", "https://s3.amazonaws.com/bullguardian/index.html", "https://s3.amazonaws.com/bullisgoated/index.html", "https://s3.amazonaws.com/bulllightspeed/index.html", "https://s3.amazonaws.com/bullmath/index.html", "https://s3.amazonaws.com/bullubg/index.html", "https://s3.amazonaws.com/iloveliteratures/index.html", "https://s3.amazonaws.com/ilovemaths/index.html", "https://s3.amazonaws.com/lsrelay-extension-production/index.html", "https://s3.amazonaws.com/macrolo/index.html", "https://s3.amazonaws.com/macrologoat/index.html", "https://s3.amazonaws.com/macrolomath/index.html", "https://s3.amazonaws.com/deaganfern/index.html", "https://bullbestyoutuber.s3.amazonaws.com/index.html", "https://bulledu.s3.amazonaws.com/index.html", "https://bullguardian.s3.amazonaws.com/index.html", "https://bullisgoated.s3.amazonaws.com/index.html", "https://bulllightspeed.s3.amazonaws.com/index.html", "https://bullmath.s3.amazonaws.com/index.html", "https://bullubg.s3.amazonaws.com/index.html", "https://iloveliteratures.s3.amazonaws.com/index.html", "https://ilovemaths.s3.amazonaws.com/index.html", "https://lsrelay-extension-production.s3.amazonaws.com/index.html", "https://macrolo.s3.amazonaws.com/index.html", "https://macrologoat.s3.amazonaws.com/index.html", "https://macrolomath.s3.amazonaws.com/index.html", "https://deaganfern.s3.amazonaws.com/index.html"]}, {"title": "NIKEHUB", "links": ["https://cdn.jsdelivr.net/gh/NoseyGames/data@main/svgs/index.svg", "https://cdn.jsdelivr.net/gh/NoseyGames/svg@main/index.svg", "https://cdn.jsdelivr.net/gh/avaisadev/svg@main/index.svg", "https://cdn.jsdelivr.net/gh/avaisadev/securly.com/index.svg", "https://cdn.jsdelivr.net/gh/avaisadev/testing@main/index.svg", "https://cdn.jsdelivr.net/gh/avaisadev/github.com/index.svg", "https://esm.sh/gh/avaisadev/github.com@b9204eb/index.svg", "https://esm.sh/gh/avaisadev/securly.com@8a9e121/index.svg", "https://unpkg.com/@securlytestingscrape/diagnostics@1.0.0/index.svg", "https://cdn.jsdelivr.net/gh/lilrtglock/github@main/index.svg", "https://cdn.jsdelivr.net/gh/lilrtglock/github@latest/index.svg", "https://cdn.jsdelivr.net/gh/chillguyaQ-cmd/github.com@main/index.svg", "https://cdn.jsdelivr.net/gh/chillguyaQ-cmd/github.com@latest/index.svg", "https://cdn.jsdelivr.net/gh/avaisadev/how-to-use-linux@latest/index.svg", "https://gcore.jsdelivr.net/gh/avaisadev/how-to-use-linux@latest/index.svg", "https://originfastly.jsdelivr.net/gh/avaisadev/how-to-use-linux@latest/index.svg", "https://fastly.jsdelivr.net/gh/avaisadev/how-to-use-linux@latest/index.svg", "https://testingcf.jsdelivr.net/gh/avaisadev/how-to-use-linux@latest/index.svg", "https://jsdelivr.b-cdn.net/gh/avaisadev/how-to-use-linux@latest/index.svg", "https://cdn.statically.io/gh/avaisadev/how-to-use-linux@latest/index.svg", "https://raw.githubusercontent.com/avaisadev/how-to-use-linux/latest/index.svg", "https://cdn.jsdelivr.net/gh/avaisadev/github@latest/index.svg", "https://gcore.jsdelivr.net/gh/avaisadev/github@latest/index.svg", "https://originfastly.jsdelivr.net/gh/avaisadev/github@latest/index.svg", "https://fastly.jsdelivr.net/gh/avaisadev/github@latest/index.svg", "https://testingcf.jsdelivr.net/gh/avaisadev/github@latest/index.svg", "https://jsdelivr.b-cdn.net/gh/avaisadev/github@latest/index.svg", "https://cdn.statically.io/gh/avaisadev/github@latest/index.svg", "https://raw.githubusercontent.com/avaisadev/github/latest/index.svg", "https://cdn.jsdelivr.net/gh/avaisadev/github.com@latest/index.svg", "https://gcore.jsdelivr.net/gh/avaisadev/github.com@latest/index.svg", "https://originfastly.jsdelivr.net/gh/avaisadev/github.com@latest/index.svg", "https://fastly.jsdelivr.net/gh/avaisadev/github.com@latest/index.svg", "https://testingcf.jsdelivr.net/gh/avaisadev/github.com@latest/index.svg", "https://jsdelivr.b-cdn.net/gh/avaisadev/github.com@main/index.svg", "https://cdn.statically.io/gh/avaisadev/github.com@main/index.svg", "https://raw.githubusercontent.com/avaisadev/github.com/main/index.svg"]}, {"title": "GN-MATH", "links": ["https://unpkg.com/snoopylearning@1.0.0/index.svg", "https://unpkg.com/snoopylearning@1.0.0/index.html", "https://fastly.jsdelivr.net/npm/snoopylearning@1.0.0/index.svg", "https://esm.sh/snoopylearning@1.0.0/index.html", "https://cdn.statically.io/npm/snoopylearning@1.0.0/index.svg", "https://cdn.statically.io/gh/daxcodesalt/x3@main/securly.com/classlink.com/FreeBusinessEducation-Logo-Square.svg", "https://sololearn.com/en/compiler-playground/W6oaP0W77da1", "https://797902fe-b3d7-4ad2-9527-1e67cf1372d1.filesusr.com/html/1ce7bc_50f948dc314c4525966a767f300ffa00.html", "https://snoopydbb-wixsite-com.filesusr.com/html/1ce7bc_ee1a218e32897c5f18855c7a5f85c451.html", "https://script.google.com/macros/s/AKfycbxISGMiKeaFqOx3Z9T8AB0tz-tiyteerO1DkaoB1FFaG-ghRJ_PtrHYEPWd0QrgvrY7Cg/exec", "https://jsdelivr.b-cdn.net/gh/stockable/sites@main/gnmath.svg"]}, {"title": "YUKIOS", "links": ["https://cdn.jsdelivr.net/gh/reeyuki/YukiOsSingleHtml@main/yukios.svg", "https://originfastly.jsdelivr.net/gh/reeyuki/YukiOsSingleHtml@main/yukios.svg", "https://gcore.jsdelivr.net/gh/reeyuki/YukiOsSingleHtml@main/yukios.svg", "https://esm.sh/gh/reeyuki/YukiOsSingleHtml@main/yukios.svg", "https://cdn.statically.io/gh/reeyuki/YukiOsSingleHtml@main/yukios.svg", "https://cdn.staticdelivr.com/gh/reeyuki/YukiOsSingleHtml/main/yukios.svg"]}, {"title": "MELON SODA", "links": ["http://cdn.statically.io/gh/linuxfandudeguy/classwork-chemistry@a0d07aeb", "http://assets.editor.p5js.org/69f62565e047d647146aca73/3db16b06-191d-4255-ba83-3b3a976e634f.svg", "https://meronsooda.netlify.app/", "http://raw.githubusercontent.com/linuxfandudeguy/melonsoda/main/index.html", "http://unpkg.com/melonsoda@1.0.0/offline/selfupdating.html", "http://cdn.jsdelivr.net/gh/linuxfandudeguy/classwork-chemistry@main/ixl.svg", "http://fastly.jsdelivr.net/gh/linuxfandudeguy/classwork-chemistry@main/ixl.svg", "http://gcore.jsdelivr.net/gh/linuxfandudeguy/classwork-chemistry@main/ixl.svg", "http://originfastly.jsdelivr.net/gh/linuxfandudeguy/classwork-chemistry@main/ixl.svg", "http://testingcf.jsdelivr.net/gh/linuxfandudeguy/classwork-chemistry@main/ixl.svg", "https://learn-french-easy.wasmer.app/offline/selfupdating.html", "https://educational-algebra-study-tutor.edgeone.app/offline/selfupdating.html", "https://k12-algebra-tutoring-edu-us-resources.pages.dev/offline/selfupdating.html", "http://rawcdn.githack.com/linuxfandudeguy/classwork-chemistry/a0d07aeb", "http://esm.sh/melonsoda@1.0.0/offline/selfupdating.html", "http://m3lon-ela-testprep.w3spaces.com/", "http://free-french-resources.web.app/offline/selfupdating.html", "http://free-french-resources.firebaseapp.com/offline/selfupdating.html", "http://unpkg.com/scientific-algebra-calculator@1.0.0"]}],grid=document.querySelector('.grid'),search=document.querySelector('#search'),modal=document.querySelector('#modal'),links=document.querySelector('#links'),title=document.querySelector('#mt'),toast=document.querySelector('#toast');function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}function U(s){return /^https?:\/\//i.test(s)?s:'https://'+s}function render(q=''){q=q.toLowerCase().trim();grid.innerHTML='';games.forEach((g,i)=>{if(q&&!g.title.toLowerCase().includes(q)&&!g.links.some(x=>x.toLowerCase().includes(q)))return;let c=document.createElement('article');c.className='card';c.innerHTML=`<div class="num">DATABASE ENTRY ${String(i+1).padStart(2,'0')}</div><h2>${esc(g.title)}</h2><p>${g.links.length} LINK${g.links.length==1?'':'S'} AVAILABLE</p><button class="open">OPEN DATABASE</button>`;c.querySelector('.open').onclick=()=>openBox(g.title);grid.appendChild(c)});if(!grid.children.length)grid.innerHTML='<div class="empty">NO RESULTS FOUND</div>'}function openBox(t){let g=games.find(x=>x.title===t);if(!g)return;title.textContent='EF:// '+g.title;links.innerHTML='';g.links.forEach((raw,i)=>{let r=document.createElement('div');r.className='row';let u=U(raw);r.innerHTML=`<span class="idx">${String(i+1).padStart(2,'0')}</span><a class="url" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(raw)}</a><button class="copy">COPY</button>`;r.querySelector('.copy').onclick=async()=>{const btn=r.querySelector('.copy');let ok=false;try{if(navigator.clipboard&&typeof navigator.clipboard.writeText==='function'){await navigator.clipboard.writeText(u);ok=true}}catch(e){}if(!ok){try{const ta=document.createElement('textarea');ta.value=u;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.left='-9999px';ta.style.top='0';document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,ta.value.length);ok=document.execCommand('copy');ta.remove()}catch(e){ok=false}}if(ok){btn.textContent='COPIED ✓';msg('COPIED ✓');setTimeout(()=>btn.textContent='COPY',1400);return}const box=document.createElement('div');box.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;z-index:9999;padding:20px';const panel=document.createElement('div');panel.style.cssText='width:min(700px,100%);border:1px solid #fff;background:#050505;padding:22px;font-family:monospace;color:#fff';const title=document.createElement('div');title.textContent='COPY LINK';title.style.marginBottom='12px';const input=document.createElement('input');input.value=u;input.readOnly=true;input.style.cssText='width:100%;box-sizing:border-box;background:#000;color:#fff;border:1px solid #555;padding:12px;font:14px monospace';const help=document.createElement('div');help.textContent='Press CTRL+C to copy, then close this box.';help.style.cssText='margin-top:12px;font-size:12px;color:#aaa';const close=document.createElement('button');close.textContent='CLOSE';close.style.cssText='margin-top:14px;background:#000;color:#fff;border:1px solid #777;padding:9px 14px;cursor:pointer';panel.append(title,input,help,close);box.append(panel);document.body.append(box);input.focus();input.select();close.onclick=()=>box.remove()};links.appendChild(r)});if(!g.links.length)links.innerHTML='<div class="empty">NO LINKS ADDED</div>';modal.classList.add('show');document.body.style.overflow='hidden'}function closeBox(){modal.classList.remove('show');document.body.style.overflow=''}function msg(x){toast.textContent=x;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1200)}function randomGame(){openBox(games[Math.floor(Math.random()*games.length)].title)}function allGames(){search.value='';render();document.querySelector('main').scrollIntoView({behavior:'smooth'})}search.oninput=()=>render(search.value);document.onkeydown=e=>{if(e.key==='Escape')closeBox();if(e.key==='/'&&document.activeElement!==search){e.preventDefault();search.focus()}};modal.onclick=e=>{if(e.target===modal)closeBox()};const c=document.querySelector('#matrix'),x=c.getContext('2d'),chars='01EFGAMES<>[]{}#$%/\\',fs=14;let d=[];function resize(){c.width=innerWidth;c.height=innerHeight;d=Array.from({length:Math.ceil(c.width/fs)},()=>Math.random()*c.height/fs)}function matrix(){x.fillStyle='rgba(0,0,0,.08)';x.fillRect(0,0,c.width,c.height);x.fillStyle='#fff';x.font=fs+'px monospace';d.forEach((y,i)=>{x.fillText(chars[Math.floor(Math.random()*chars.length)],i*fs,y*fs);if(y*fs>c.height&&Math.random()>.975)d[i]=0;d[i]+=.65})}addEventListener('resize',resize);resize();setInterval(matrix,45);const log=document.querySelector('#log'),bar=document.querySelector('#bootbar'),pct=document.querySelector('#bootpct'),boot=['INITIALIZING EF GAMES...','CONNECTING TO GAME DATABASE...','LOADING GLITCH ENGINE...','LOADING GAME PORTALS...','CALIBRATING CRT DISPLAY...','STARTING EF GAMES...','ACCESS GRANTED.'];let n=0;(function b(){if(n<boot.length){log.innerHTML+=boot[n]+'<br>';const progress=Math.round(((n+1)/boot.length)*100);bar.style.width=progress+'%';pct.textContent=progress+'%';n++;setTimeout(b,300)}else{bar.style.width='100%';pct.textContent='100%';setTimeout(()=>document.querySelector('#boot').classList.add('hide'),900)}})();
+const audio=document.getElementById('audio'),nowName=document.getElementById('nowName'),
+queueList=document.getElementById('queueList'),queueCount=document.getElementById('queueCount'),
+musicFile=document.getElementById('musicFile'),musicUrl=document.getElementById('musicUrl');
+let musicQueue=[],musicIndex=-1,currentObjectUrls=[];
+const genres=[
+  ['LO-FI','CHILL'],['HIP-HOP','BEATS'],['EDM','ENERGY'],['PHONK','DRIVE'],
+  ['POP','HITS'],['ROCK','GUITAR'],['JAZZ','SMOOTH'],['CLASSICAL','FOCUS'],
+  ['AMBIENT','SPACE'],['GAME OST','SOUNDTRACKS'],['ELECTRONIC','SYNTH'],['DNB','FAST']
+];
+function renderGenres(){
+  const box=document.getElementById('genres'); box.innerHTML='';
+  genres.forEach(g=>{
+    const b=document.createElement('button'); b.className='genre';
+    b.innerHTML='<b>'+esc(g[0])+'</b><span>'+esc(g[1])+'</span>';
+    b.onclick=()=>window.open('https://www.youtube.com/results?search_query='+encodeURIComponent(g[0]+' '+g[1]+' music'),'_blank','noopener');
+    box.appendChild(b);
+  });
+}
+function renderMusicQueue(){
+  queueList.innerHTML='';
+  queueCount.textContent=musicQueue.length+' TRACK'+(musicQueue.length===1?'':'S');
+  musicQueue.forEach((t,i)=>{
+    const row=document.createElement('div'); row.className='track'+(i===musicIndex?' playing':'');
+    const name=document.createElement('span'); name.className='trackName'; name.textContent=(i+1).toString().padStart(2,'0')+' // '+t.name;
+    const play=document.createElement('button'); play.textContent='PLAY'; play.onclick=()=>loadMusic(i,true);
+    const del=document.createElement('button'); del.textContent='×'; del.title='Remove'; del.onclick=()=>{musicQueue.splice(i,1);if(i===musicIndex){musicIndex=Math.min(musicIndex,musicQueue.length-1)}else if(i<musicIndex)musicIndex--;renderMusicQueue()};
+    row.append(name,play,del); queueList.appendChild(row);
+  });
+}
+function addMusicTrack(name,src){
+  musicQueue.push({name,src}); renderMusicQueue();
+  if(musicIndex===-1)loadMusic(0,false);
+}
+function loadMusic(i,autoplay){
+  if(i<0||i>=musicQueue.length)return;
+  musicIndex=i; const t=musicQueue[i]; audio.src=t.src; nowName.textContent=t.name; renderMusicQueue();
+  if(autoplay)audio.play().catch(()=>{});
+}
+function musicPlayPause(){
+  if(!audio.src){if(musicQueue.length)loadMusic(0,true);return}
+  if(audio.paused)audio.play().catch(()=>{});else audio.pause();
+}
+function musicNext(){if(!musicQueue.length)return;loadMusic((musicIndex+1)%musicQueue.length,true)}
+function musicPrev(){if(!musicQueue.length)return;loadMusic((musicIndex-1+musicQueue.length)%musicQueue.length,true)}
+function musicShuffle(){if(musicQueue.length<2)return;let i=Math.floor(Math.random()*musicQueue.length);if(i===musicIndex)i=(i+1)%musicQueue.length;loadMusic(i,true)}
+audio.addEventListener('ended',musicNext);
+musicFile.addEventListener('change',e=>{
+  [...e.target.files].forEach(file=>{
+    const u=URL.createObjectURL(file); currentObjectUrls.push(u); addMusicTrack(file.name,u);
+  }); musicFile.value='';
+});
+function addMusicUrl(){
+  const u=musicUrl.value.trim(); if(!/^https?:\/\//i.test(u)){msg('ENTER A VALID AUDIO URL');return}
+  let name;try{name=new URL(u).pathname.split('/').pop()||'ONLINE TRACK'}catch(e){name='ONLINE TRACK'}
+  addMusicTrack(decodeURIComponent(name),u); musicUrl.value=''; msg('ADDED TO QUEUE');
+}
+function clearQueue(){
+  musicQueue=[];musicIndex=-1;audio.pause();audio.removeAttribute('src');audio.load();nowName.textContent='NO TRACK SELECTED';renderMusicQueue();
+}
+renderGenres();renderMusicQueue();
+render();</script></body></html>
